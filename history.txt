@@ -1,0 +1,163 @@
+﻿https://trailhead.salesforce.com/en/content/learn/superbadges/superbadge_aap?trailmix_creator_id=00550000007SDjrAAG&trailmix_id=platform-developer-ii
+
+
+Microsoft Windows [version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation. Tous droits réservés.
+
+G:\Users\jorand>f:
+
+F:\>cd Dro
+Le chemin d'accès spécifié est introuvable.
+
+F:\>cd Persdata
+
+F:\Persdata>cd Dropbox
+
+F:\Persdata\Dropbox>cd "Trailhead DX"
+
+F:\Persdata\Dropbox\Trailhead DX>sfdx update
+sfdx-cli: Updating CLI... already on latest version: 6.41.1-44a593d6a3
+sfdx-cli: Updating plugins... done
+
+F:\Persdata\Dropbox\Trailhead DX>sfdx force:project:create --help
+Usage: sfdx force:project:create -n <string> [-t <string>] [-d <string>] [-s <string>] [-p <string>] [-x] [--json] [--loglevel <stri
+ng>]
+
+create a new SFDX project
+
+Flags:
+ -p, --defaultpackagedir DEFAULTPACKAGEDIR  default package directory name (force-app*)
+ -x, --manifest                             generate a manifest (package.xml) for change-set-based development
+ -s, --namespace NAMESPACE                  project associated namespace
+ -d, --outputdir OUTPUTDIR                  folder for saving the created files
+ -n, --projectname PROJECTNAME              (required) name of the generated project
+ -t, --template TEMPLATE                    template to use for file creation (Defaultsfdx-project.json*)
+ --json                                     JSON output
+ --loglevel LOGLEVEL                        logging level for this command invocation (error*,trace,debug,info,warn,fatal)
+
+Default values are used if the template, namespace, defaultpackagedir, and outputdir aren't supplied.
+The outputdir can be an absolute path or relative to the current working directory.
+
+Examples:
+   $ sfdx force:project:create --projectname mywork
+   $ sfdx force:project:create --projectname mywork --defaultpackagedir myapp
+   $ sfdx force:project:create --projectname mywork --defaultpackagedir myapp --manifest
+
+
+F:\Persdata\Dropbox\Trailhead DX>sfdx force:project:create-n AdvancedApexSpecialist
+ !    force:project:create-n is not a sfdx command.
+ !    Perhaps you meant force:project:create
+ !    Run sfdx help force for a list of available topics.
+
+F:\Persdata\Dropbox\Trailhead DX>sfdx force:project:create -n AdvancedApexSpecialist
+target dir = F:\Persdata\Dropbox\Trailhead DX
+   create AdvancedApexSpecialist\sfdx-project.json
+   create AdvancedApexSpecialist\README.md
+   create AdvancedApexSpecialist\.forceignore
+   create AdvancedApexSpecialist\config\project-scratch-def.json
+
+
+F:\Persdata\Dropbox\Trailhead DX>cd AdvancedApexSpecialist
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:org:create -f config/project-scratch-def.json -a TempUnmanaged
+Successfully created scratch org: 00D4E0000001Rx9UAE, username: test-zjisnynj1wlm@example.com
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:org:open
+ERROR:  No defaultusername org found.
+
+Try this:
+Run the "sfdx force:auth" commands with --setdefaultusername to connect to an org and set it as your default org.
+Run "force:org:create" with --setdefaultusername to create a scratch org and set it as your default org.
+Run "sfdx force:config:set defaultusername=<username>" to set your default username.
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:org:display -u TempUnmanaged
+=== Org Description
+KEY              VALUE
+───────────────  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Access Token     00D4E0000001Rx9!ARcAQDpWtMDJbRyj_ymUsOh_D_s9cfRcSfKEQfn1MSw5Ark1q5yWJDvJBC2wdJjFtCqzN7mjHl.1ULvUc4X9SPQikd3Vt6Hv
+Alias            TempUnmanaged
+Client Id        SalesforceDevelopmentExperience
+Created By       thierry.jorand@gmail.com
+Created Date     2018-11-23T18:18:42.000+0000
+Dev Hub Id       thierry.jorand@gmail.com
+Edition          Developer
+Expiration Date  2018-11-30
+Id               00D4E0000001Rx9UAE
+Instance Url     https://velocity-force-2101-dev-ed.cs83.my.salesforce.com/
+Org Name         Demo Company
+Status           Active
+Username         test-zjisnynj1wlm@example.com
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:user:password:generate -u TempUnmanaged
+Successfully set the password "7P_L-r7hv(" for user test-zjisnynj1wlm@example.com.
+You can see the password again by running "sfdx force:user:display -u test-zjisnynj1wlm@example.com".
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:org:display -u TempUnmanaged
+=== Org Description
+KEY              VALUE
+───────────────  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Access Token     00D4E0000001Rx9!ARcAQDpWtMDJbRyj_ymUsOh_D_s9cfRcSfKEQfn1MSw5Ark1q5yWJDvJBC2wdJjFtCqzN7mjHl.1ULvUc4X9SPQikd3Vt6Hv
+Alias            TempUnmanaged
+Client Id        SalesforceDevelopmentExperience
+Created By       thierry.jorand@gmail.com
+Created Date     2018-11-23T18:18:42.000+0000
+Dev Hub Id       thierry.jorand@gmail.com
+Edition          Developer
+Expiration Date  2018-11-30
+Id               00D4E0000001Rx9UAE
+Instance Url     https://velocity-force-2101-dev-ed.cs83.my.salesforce.com/
+Org Name         Demo Company
+Password         7P_L-r7hv(
+Status           Active
+Username         test-zjisnynj1wlm@example.com
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:user:display -u test-zjisnynj1wlm@example.com
+ERROR:  logger is not defined.
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:user:display -u test-zjisnynj1wlm@example.com
+ERROR:  logger is not defined.
+
+
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:org:display -u TempUnmanaged
+=== Org Description
+KEY              VALUE
+───────────────  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Access Token     00D4E0000001Rx9!ARcAQDpWtMDJbRyj_ymUsOh_D_s9cfRcSfKEQfn1MSw5Ark1q5yWJDvJBC2wdJjFtCqzN7mjHl.1ULvUc4X9SPQikd3Vt6Hv
+Alias            TempUnmanaged
+Client Id        SalesforceDevelopmentExperience
+Created By       thierry.jorand@gmail.com
+Created Date     2018-11-23T18:18:42.000+0000
+Dev Hub Id       thierry.jorand@gmail.com
+Edition          Developer
+Expiration Date  2018-11-30
+Id               00D4E0000001Rx9UAE
+Instance Url     https://velocity-force-2101-dev-ed.cs83.my.salesforce.com/
+Org Name         Demo Company
+Password         7P_L-r7hv(
+Status           Active
+Username         test-zjisnynj1wlm@example.com
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
