@@ -138,7 +138,223 @@ Password         7P_L-r7hv(
 Status           Active
 Username         test-zjisnynj1wlm@example.com
 
+// git init
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git init
+Initialized empty Git repository in F:/Persdata/Dropbox/Trailhead DX/AdvancedApexSpecialist/.git/
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git remote add origin https://github.com/tjofr/AdvanceedApexSpecialist
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git add -A
+warning: LF will be replaced by CRLF in .forceignore.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in config/project-scratch-def.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in sfdx-project.json.
+The file will have its original line endings in your working directory
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git commit -m "Initial project"
+[master (root-commit) c3b1b41] Initial project
+ 5 files changed, 200 insertions(+)
+ create mode 100644 .forceignore
+ create mode 100644 README.md
+ create mode 100644 config/project-scratch-def.json
+ create mode 100644 history.txt
+ create mode 100644 sfdx-project.json
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git push origin master
+remote: Repository not found.
+fatal: repository 'https://github.com/tjofr/AdvanceedApexSpecialist/' not found
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git remote add origin https://github.com/tjofr/AdvanceedApexSpecialist.git
+fatal: remote origin already exists.
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git remote add origin https://github.com/tjofr/AdvancedApexSpecialist.git
+fatal: remote origin already exists.
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git remote remove origin
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git remote add origin https://github.com/tjofr/AdvancedApexSpecialist.git
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git push origin master
+remote: Repository not found.
+fatal: repository 'https://github.com/tjofr/AdvancedApexSpecialist.git/' not found
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git push origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 2.69 KiB | 1.35 MiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/tjofr/AdvancedApexSpecialist/pull/new/master
+remote:
+To https://github.com/tjofr/AdvancedApexSpecialist.git
+ * [new branch]      master -> master
+
 F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+
+// installation de package ?ec=302&startURL=%2Fpackaging%2FinstallPackage.apexp%3Fp0%3D04tf4000001O5si
+
+// Extract the package source
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>mkdir mdapipackage
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:mdapi:retrieve -s -r ./mdapipackage -p AdvancedApexSpecialistSupe
+rbadge -u TempUnmanaged -w 10
+Retrieving source...
+
+=== Status
+Status:  InProgress
+jobid:  09S4E000001to1XUAQ
+
+
+=== Result
+Status:  Succeeded
+jobid:  09S4E000001to1XUAQ
+
+Wrote retrieve zip to F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist\mdapipackage\unpackaged.zip.
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>unzip unpackaged.zip -d .
+unzip:  cannot find either unpackaged.zip or unpackaged.zip.zip.
+Décompacter par 7-zip 
+détruire unpackaged.zip
+
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+
+// Convert
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:mdapi:convert -r mdapipackage/
+=== Converted Source
+STATE  FULL NAME                       TYPE               PROJECT PATH
+─────  ──────────────────────────────  ─────────────────  ──────────────────────────────────────────────────────────────────────────
+─────────
+Add    New_Millennium_Delivery         CustomApplication  force-app\main\default\applications\New_Millennium_Delivery.app-meta.xml
+Add    AnnouncementQueueable           ApexClass          force-app\main\default\classes\AnnouncementQueueable.cls-meta.xml
+Add    AnnouncementQueueable           ApexClass          force-app\main\default\classes\AnnouncementQueueable.cls
+Add    ChartHelper                     ApexClass          force-app\main\default\classes\ChartHelper.cls-meta.xml
+Add    ChartHelper                     ApexClass          force-app\main\default\classes\ChartHelper.cls
+Add    OrderExtension                  ApexClass          force-app\main\default\classes\OrderExtension.cls-meta.xml
+Add    OrderExtension                  ApexClass          force-app\main\default\classes\OrderExtension.cls
+Add    OrderHelper                     ApexClass          force-app\main\default\classes\OrderHelper.cls-meta.xml
+Add    OrderHelper                     ApexClass          force-app\main\default\classes\OrderHelper.cls
+Add    OrderTests                      ApexClass          force-app\main\default\classes\OrderTests.cls-meta.xml
+Add    OrderTests                      ApexClass          force-app\main\default\classes\OrderTests.cls
+Add    PackageTests                    ApexClass          force-app\main\default\classes\PackageTests.cls-meta.xml
+Add    PackageTests                    ApexClass          force-app\main\default\classes\PackageTests.cls
+Add    Product2Extension               ApexClass          force-app\main\default\classes\Product2Extension.cls-meta.xml
+Add    Product2Extension               ApexClass          force-app\main\default\classes\Product2Extension.cls
+Add    Product2Helper                  ApexClass          force-app\main\default\classes\Product2Helper.cls-meta.xml
+Add    Product2Helper                  ApexClass          force-app\main\default\classes\Product2Helper.cls
+Add    Product2Tests                   ApexClass          force-app\main\default\classes\Product2Tests.cls-meta.xml
+Add    Product2Tests                   ApexClass          force-app\main\default\classes\Product2Tests.cls
+Add    TestDataFactory                 ApexClass          force-app\main\default\classes\TestDataFactory.cls-meta.xml
+Add    TestDataFactory                 ApexClass          force-app\main\default\classes\TestDataFactory.cls
+Add    Product2.Initial_Inventory__c   CustomField        force-app\main\default\objects\Product2\fields\Initial_Inventory__c.field-meta.xml
+Add    Product2.Quantity_Ordered__c    CustomField        force-app\main\default\objects\Product2\fields\Quantity_Ordered__c.field-meta.xml
+Add    Product2.Quantity_Remaining__c  CustomField        force-app\main\default\objects\Product2\fields\Quantity_Remaining__c.field-meta.xml
+Add    OrderEdit                       ApexPage           force-app\main\default\pages\OrderEdit.page-meta.xml
+Add    OrderEdit                       ApexPage           force-app\main\default\pages\OrderEdit.page
+Add    Product2New                     ApexPage           force-app\main\default\pages\Product2New.page-meta.xml
+Add    Product2New                     ApexPage           force-app\main\default\pages\Product2New.page
+Add    orderTrigger                    ApexTrigger        force-app\main\default\triggers\orderTrigger.trigger-meta.xml
+Add    orderTrigger                    ApexTrigger        force-app\main\default\triggers\orderTrigger.trigger
+Add    product2Trigger                 ApexTrigger        force-app\main\default\triggers\product2Trigger.trigger-meta.xml
+Add    product2Trigger                 ApexTrigger        force-app\main\default\triggers\product2Trigger.trigger
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+
+// create a permission set named AdvancedApexSpecialistSuperbadge 
+// enable the New Millennium Delivery (New_Millennium_Delivery) App 
+
+// extract in source
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:source:pull -u TempUnmanaged
+=== Pulled Source
+STATE  FULL NAME                         TYPE           PROJECT PATH
+─────  ────────────────────────────────  ─────────────  ─────────────────────────────────────────────────────────────────────────────────────────────
+Add    AdvancedApexSpecialistSuperbadge  PermissionSet  force-app\main\default\permissionsets\AdvancedApexSpecialistSuperbadge.permissionset-meta.xml
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+
+// remove mdapi package
+// delete TempUnmanaged
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:org:delete -u TempUnmanaged
+Enqueue scratch org with name: TempUnmanaged for deletion?  Are you sure (y/n)?: y
+Successfully marked scratch org TempUnmanaged for deletion
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+
+// create a scratch org default for this project
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:org:create -s -f config/project-scratch-def.json
+Successfully created scratch org: 00D4E0000001RxnUAE, username: test-wtt8pll8phha@example.com
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:source:push
+=== Pushed Source
+STATE  FULL NAME                         TYPE               PROJECT PATH
+─────  ────────────────────────────────  ─────────────────  ────────────────────────────────────────────────────────────────────────
+─────────────────────
+Add    New_Millennium_Delivery           CustomApplication  force-app\main\default\applications\New_Millennium_Delivery.app-meta.xml
+Add    AnnouncementQueueable             ApexClass          force-app\main\default\classes\AnnouncementQueueable.cls
+Add    AnnouncementQueueable             ApexClass          force-app\main\default\classes\AnnouncementQueueable.cls-meta.xml
+Add    ChartHelper                       ApexClass          force-app\main\default\classes\ChartHelper.cls
+Add    ChartHelper                       ApexClass          force-app\main\default\classes\ChartHelper.cls-meta.xml
+Add    OrderExtension                    ApexClass          force-app\main\default\classes\OrderExtension.cls
+Add    OrderExtension                    ApexClass          force-app\main\default\classes\OrderExtension.cls-meta.xml
+Add    OrderHelper                       ApexClass          force-app\main\default\classes\OrderHelper.cls
+Add    OrderHelper                       ApexClass          force-app\main\default\classes\OrderHelper.cls-meta.xml
+Add    OrderTests                        ApexClass          force-app\main\default\classes\OrderTests.cls
+Add    OrderTests                        ApexClass          force-app\main\default\classes\OrderTests.cls-meta.xml
+Add    PackageTests                      ApexClass          force-app\main\default\classes\PackageTests.cls
+Add    PackageTests                      ApexClass          force-app\main\default\classes\PackageTests.cls-meta.xml
+Add    Product2Extension                 ApexClass          force-app\main\default\classes\Product2Extension.cls
+Add    Product2Extension                 ApexClass          force-app\main\default\classes\Product2Extension.cls-meta.xml
+Add    Product2Helper                    ApexClass          force-app\main\default\classes\Product2Helper.cls
+Add    Product2Helper                    ApexClass          force-app\main\default\classes\Product2Helper.cls-meta.xml
+Add    Product2Tests                     ApexClass          force-app\main\default\classes\Product2Tests.cls
+Add    Product2Tests                     ApexClass          force-app\main\default\classes\Product2Tests.cls-meta.xml
+Add    TestDataFactory                   ApexClass          force-app\main\default\classes\TestDataFactory.cls
+Add    TestDataFactory                   ApexClass          force-app\main\default\classes\TestDataFactory.cls-meta.xml
+Add    Product2.Initial_Inventory__c     CustomField        force-app\main\default\objects\Product2\fields\Initial_Inventory__c.field-meta.xml
+Add    Product2.Quantity_Ordered__c      CustomField        force-app\main\default\objects\Product2\fields\Quantity_Ordered__c.field-meta.xml
+Add    Product2.Quantity_Remaining__c    CustomField        force-app\main\default\objects\Product2\fields\Quantity_Remaining__c.field-meta.xml
+Add    OrderEdit                         ApexPage           force-app\main\default\pages\OrderEdit.page
+Add    OrderEdit                         ApexPage           force-app\main\default\pages\OrderEdit.page-meta.xml
+Add    Product2New                       ApexPage           force-app\main\default\pages\Product2New.page
+Add    Product2New                       ApexPage           force-app\main\default\pages\Product2New.page-meta.xml
+Add    AdvancedApexSpecialistSuperbadge  PermissionSet      force-app\main\default\permissionsets\AdvancedApexSpecialistSuperbadge.permissionset-meta.xml
+Add    orderTrigger                      ApexTrigger        force-app\main\default\triggers\orderTrigger.trigger
+Add    orderTrigger                      ApexTrigger        force-app\main\default\triggers\orderTrigger.trigger-meta.xml
+Add    product2Trigger                   ApexTrigger        force-app\main\default\triggers\product2Trigger.trigger
+Add    product2Trigger                   ApexTrigger        force-app\main\default\triggers\product2Trigger.trigger-meta.xml
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:user:permset:assign -n AdvancedApexSpecialistSuperbadge
+=== Permsets Assigned
+USERNAME                       PERMISSION SET ASSIGNMENT
+─────────────────────────────  ────────────────────────────────
+test-wtt8pll8phha@example.com  AdvancedApexSpecialistSuperbadge
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:org:open
+Access org 00D4E0000001RxnUAE as user test-wtt8pll8phha@example.com with the following URL: https://enterprise-platform-7168-dev-ed.
+cs83.my.salesforce.com//secur/frontdoor.jsp?sid=00D4E0000001Rxn!ARcAQA4EDXUZxEqpNGlQjnDJMxMCQh_SG.SkhA8E88tr3w4IP.URXDRS.292J9tTtECG
+I4AEmAoAyENMqnAYLIoEGW16rLo6
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+
+
+
+
+
+
+
+
+
+
 
 
 
