@@ -95,10 +95,10 @@
             "isDirectory": true,
             "isMetadataFile": false,
             "size": 0,
-            "modifiedTime": 1543338226160,
-            "changeTime": 1543338226160,
+            "modifiedTime": 1543338678555,
+            "changeTime": 1543338678555,
             "isWorkspace": false,
-            "contentHash": "95dbbdc14a80f10d51a1eebd2f91783b6861086a"
+            "contentHash": "1c72a57fb0329000f4c2803ccdad40412c7f050c"
         }
     ],
     [
@@ -642,16 +642,15 @@
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist",
         {
+            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist",
             "isDirectory": true,
-            "size": 0,
-            "modifiedTime": 1543011683075,
-            "changeTime": 1543011683075,
-            "contentHash": "0d28f4a7b979471b2aa75c08ffeb9142fe4f2e08",
             "isMetadataFile": false,
-            "state": "u",
+            "size": 0,
+            "modifiedTime": 1543338454572,
+            "changeTime": 1543338454572,
             "isWorkspace": true,
-            "isArtifactRoot": false
+            "contentHash": "c6555fe08d5f43e8a39a3f1907e6000cf6ea7ef9"
         }
     ],
     [
@@ -782,6 +781,32 @@
             "contentHash": "e364e4d3c503804e0ca6d6bb92ab9cc0ceac2327",
             "isMetadataFile": false,
             "state": "u"
+        }
+    ],
+    [
+        "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\Constants.cls",
+        {
+            "state": "u",
+            "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\Constants.cls",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 1539,
+            "modifiedTime": 1543341517331,
+            "changeTime": 1543341517331,
+            "contentHash": "ead162d2ecd645fa34d343b137d48dd77e509c69"
+        }
+    ],
+    [
+        "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\Constants.cls-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\Constants.cls-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 187,
+            "modifiedTime": 1543338678556,
+            "changeTime": 1543338678877,
+            "contentHash": "fac37b2d1e956f83a7a06c8dc425780e56155a8d"
         }
     ]
 ]
