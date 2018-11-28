@@ -17,13 +17,13 @@ public with sharing class Constants {
     //You can’t activate a draft order unless you have a line item, and you can’t have a line item unless you have an order saved in the system.
     public static final String DRAFT_ORDER_STATUS = 'Draft';
     // used to evaluate if an Order is Activated or not.
-    public static String ACTIVATED_ORDER_STATUS = 'Activated';
+    public static final String ACTIVATED_ORDER_STATUS = 'Activated';
     
     // used to query a Chatter Group by Name.
-    public static String INVENTORY_ANNOUNCEMENTS = 'Inventory Announcements';
+    public static final String INVENTORY_ANNOUNCEMENTS = 'Inventory Announcements';
     // used to display user friendly error messages on Visualforce pages.
-    public static String ERROR_MESSAGE = 'An error has occurred, please take a screenshot with the URL and send it to IT.';
+    public static final String ERROR_MESSAGE = 'An error has occurred, please take a screenshot with the URL and send it to IT.';
 
-    public static Id STANDARD_PRICEBOOK_ID = '01s4E000000HlaXQAS';
+    public static final Id STANDARD_PRICEBOOK_ID = '01s4E000000HlaXQAS';
 
 }

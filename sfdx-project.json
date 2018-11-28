@@ -13,6 +13,7 @@
     "sourceApiVersion": "44.0",
     "packageAliases": {
         "AdvancedApexSpecialist": "0Ho2I0000004C9ISAU",
-        "AdvancedApexSpecialist@1.0.0-1": "04t2I000000T4RiQAK"
+        "AdvancedApexSpecialist@1.0.0-1": "04t2I000000T4RiQAK",
+        "AdvancedApexSpecialist@1.0.0-2": "04t2I000000T4RnQAK"
     }
 }

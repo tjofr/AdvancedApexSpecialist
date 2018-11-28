@@ -678,9 +678,181 @@ F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git commit -m "Custom Me
 
 F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
 
+rem create package
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:package:create --name AdvancedApexSpecialist --description "Superbage package Advanced Apex Specialist" --nonamespace --packagetype Unlocked --path force-app
+sfdx-project.json has been updated.
+Successfully created a package. 0Ho2I0000004C9ISAU
+=== Ids
+NAME        VALUE
+──────────  ──────────────────
+Package Id  0Ho2I0000004C9ISAU
+
+rem create scratch org to test package
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:org:create --definitionfile config/project-scratch-def.json --durationdays 30 --setalias TestPackage
 
 
+Successfully created scratch org: 00D0E0000001dQJUAY, username: test-xxsi6mnbxhfw@example.com
 
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+rem update sfdx-project.json to 1.0 instead 0.1
+rem create package version
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:package:version:create -p AdvancedApexSpecialist -d force-app -k
+test1234 --wait 10
+Request in progress. Sleeping 30 seconds. Will wait a total of 600 more seconds before timing out. Current Status='InProgress'
+Request in progress. Sleeping 30 seconds. Will wait a total of 570 more seconds before timing out. Current Status='InProgress'
+Request in progress. Sleeping 30 seconds. Will wait a total of 540 more seconds before timing out. Current Status='InProgress'
+Request in progress. Sleeping 30 seconds. Will wait a total of 510 more seconds before timing out. Current Status='InProgress'
+sfdx-project.json has been updated.
+Successfully created the package version [08c2I0000004C9DQAU]. Subscriber Package Version Id: 04t2I000000T4RiQAK.
+Package Installation URL: https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2I000000T4RiQAK
+As an alternative, you can use the "sfdx force:package:install" command.
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+
+REm Install package version
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:package:install --wait 10 --publishwait 10 --package AdvancedApexSpecialist@1.0.0-1  -k test1234 -r -u TestPackage
+Waiting for the package install request to complete. Status = IN_PROGRESS
+Waiting for the package install request to complete. Status = IN_PROGRESS
+Waiting for the package install request to complete. Status = IN_PROGRESS
+Waiting for the package install request to complete. Status = IN_PROGRESS
+Successfully installed package [04t2I000000T4RiQAK]
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+
+REM Open scratch org Testpackage and check package installation
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:org:open -u TestPackage
+Access org 00D0E0000001dQJUAY as user test-xxsi6mnbxhfw@example.com with the following URL: https://app-platform-2181-dev-ed.cs89.my.salesforce.com//secur/frontdoor.jsp?sid=00D0E0000001dQJ!AQUAQM4gdeeHZo59XwzpIrbU.eogFytJGU3TIN2jV_344SYmZBjfJOUhbbUwnEUIEXRzkGQBz2iSrzXR0O9P8DWDeJRcwSw4
+
+rem log to tp
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:auth:web:login -a ApexAdvancedSpecialistTP 
+Successfully authorized thierry.jorand@resourceful-badger-mqqqfk.com with org ID 00D1t000000sewREAQ
+You may now close the browser
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+rem install package version in TP ApexAdvancedSpecialistTP
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:package:install --wait 10 --publishwait 10 --package AdvancedApexSpecialist@1.0.0-1  -k test1234 -r -u ApexAdvancedSpecialistTP
+Waiting for the package install request to complete. Status = IN_PROGRESS
+Waiting for the package install request to complete. Status = IN_PROGRESS
+Waiting for the package install request to complete. Status = IN_PROGRESS
+Successfully installed package [04t2I000000T4RiQAK]
+
+
+rem git management 
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --
+graph --date=short"
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git hist
+* 618613f 2018-11-28 | Custom Metadata (HEAD -> master) [Thierry Jorand]
+* dc09f50 2018-11-27 | Constants created (origin/master) [Thierry Jorand]
+* b57c634 2018-11-27 | remove PackageTest [Thierry Jorand]
+* 68e023d 2018-11-27 | Prework + nocache + Product LV [Thierry Jorand]
+* 992363a 2018-11-23 | ApexSuperBadge package installed [Thierry Jorand]
+* c3b1b41 2018-11-23 | Initial project [Thierry Jorand]
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git add -A
+warning: LF will be replaced by CRLF in sfdx-project.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .sfdx/orgs/thierry.jorand@gmail.com/metadataTypeInfos.json.
+The file will have its original line endings in your working directory
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git commit -m "AdvancedApexSpecialist@1.0.0-1 package in TP"
+[master 1d6e892] AdvancedApexSpecialist@1.0.0-1 package in TP
+ 4 files changed, 5684 insertions(+), 11 deletions(-)
+ create mode 100644 .sfdx/orgs/thierry.jorand@gmail.com/metadataTypeInfos.json
+ rewrite .sfdx/tools/apex.db (64%)
+ rewrite sfdx-project.json (95%)
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git push origin master
+Enumerating objects: 53, done.
+Counting objects: 100% (53/53), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (34/34), done.
+Writing objects: 100% (38/38), 547.70 KiB | 2.62 MiB/s, done.
+Total 38 (delta 14), reused 0 (delta 0)
+remote: Resolving deltas: 100% (14/14), completed with 6 local objects.
+To https://github.com/tjofr/AdvancedApexSpecialist.git
+   dc09f50..1d6e892  master -> master
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git hist
+* 1d6e892 2018-11-28 | AdvancedApexSpecialist@1.0.0-1 package in TP (HEAD -> master, origin/master) [Thierry Jorand]
+* 618613f 2018-11-28 | Custom Metadata [Thierry Jorand]
+* dc09f50 2018-11-27 | Constants created [Thierry Jorand]
+* b57c634 2018-11-27 | remove PackageTest [Thierry Jorand]
+* 68e023d 2018-11-27 | Prework + nocache + Product LV [Thierry Jorand]
+* 992363a 2018-11-23 | ApexSuperBadge package installed [Thierry Jorand]
+* c3b1b41 2018-11-23 | Initial project [Thierry Jorand]
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git add -A
+warning: LF will be replaced by CRLF in force-app/main/default/classes/Constants.cls.
+The file will have its original line endings in your working directory
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git commit -m "Fix Ensure that you create the DEFAULT_ROWS constant and that
+ it is an immutable property."
+[master f066f0d] Fix Ensure that you create the DEFAULT_ROWS constant and that it is an immutable property.
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:source:push
+PROJECT PATH                                  ERROR
+────────────────────────────────────────────  ────────────────────────────────────────────────────────────────────────────────────────────────────────────
+force-app\main\default\classes\Constants.cls  Final members can only be assigned in their declaration, init blocks, or constructors:
+ PRODUCT_FAMILY (28:9)
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:source:push
+=== Pushed Source
+STATE    FULL NAME  TYPE       PROJECT PATH
+───────  ─────────  ─────────  ────────────────────────────────────────────
+Changed  Constants  ApexClass  force-app\main\default\classes\Constants.cls
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git add -A
+warning: LF will be replaced by CRLF in .sfdx/orgs/test-wtt8pll8phha@example.com/metadataTypeInfos.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .sfdx/orgs/test-wtt8pll8phha@example.com/sourcePathInfos.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .sfdx/orgs/test-wtt8pll8phha@example.com/sourcePathInfos.json.bak.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in force-app/main/default/classes/Constants.cls.
+The file will have its original line endings in your working directory
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git commit -m "Fix Ensure that you create the DEFAULT_ROWS constant and that
+ it is an immutable property."
+[master 57a29df] Fix Ensure that you create the DEFAULT_ROWS constant and that it is an immutable property.
+ 3 files changed, 341 insertions(+), 98 deletions(-)
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+
+REM create package version
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:package:version:create -p AdvancedApexSpecialist -d force-app -k
+test1234 --wait 10
+Request in progress. Sleeping 30 seconds. Will wait a total of 600 more seconds before timing out. Current Status='Queued'
+Request in progress. Sleeping 30 seconds. Will wait a total of 570 more seconds before timing out. Current Status='InProgress'
+Request in progress. Sleeping 30 seconds. Will wait a total of 540 more seconds before timing out. Current Status='InProgress'
+Request in progress. Sleeping 30 seconds. Will wait a total of 510 more seconds before timing out. Current Status='InProgress'
+Request in progress. Sleeping 30 seconds. Will wait a total of 480 more seconds before timing out. Current Status='InProgress'
+Request in progress. Sleeping 30 seconds. Will wait a total of 450 more seconds before timing out. Current Status='InProgress'
+sfdx-project.json has been updated.
+Successfully created the package version [08c2I0000004C9IQAU]. Subscriber Package Version Id: 04t2I000000T4RnQAK.
+Package Installation URL: https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2I000000T4RnQAK
+As an alternative, you can use the "sfdx force:package:install" command.
+
+rem install in TP
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:package:install --wait 10 --publishwait 10 --package AdvancedApex
+Specialist@1.0.0-2  -k test1234 -r -u ApexAdvancedSpecialistTP
+Waiting for the Subscriber Package Version ID to be published to the target org.
+Waiting for the Subscriber Package Version ID to be published to the target org.
+Waiting for the Subscriber Package Version ID to be published to the target org.
+Waiting for the Subscriber Package Version ID to be published to the target org.
+Waiting for the Subscriber Package Version ID to be published to the target org.
+Waiting for the Subscriber Package Version ID to be published to the target org.
+...
+Waiting for the package install request to complete. Status = IN_PROGRESS
+Waiting for the package install request to complete. Status = IN_PROGRESS
+Waiting for the package install request to complete. Status = IN_PROGRESS
+Successfully installed package [04t2I000000T4RnQAK]
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
 
 
 
