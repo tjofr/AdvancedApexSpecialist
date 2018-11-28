@@ -1,18 +1,18 @@
 public with sharing class Constants {
 
     // used to control the number of rows displayed by a Visualforce page.
-    public static Integer DEFAULT_ROWS = 5;
+    public static final Integer DEFAULT_ROWS = 5;
     // used to populate picklist values in Visualforce Pages.
-    public static String  SELECT_ONE = 'Select one';
+    public static final String  SELECT_ONE = 'Select one';
     // used to determine the threshold that causes low inventory alerts.
-    public static String INVENTORY_LEVEL_LOW = 'Has a low inventory';
+    public static final String INVENTORY_LEVEL_LOW = 'Has a low inventory';
     // used to populate picklist values in Visualforce pages.
-    public static List<Schema.PicklistEntry> PRODUCT_FAMILY;
+    public static final List<Schema.PicklistEntry> PRODUCT_FAMILY;
 
     // order statuses
     // used to indicate that an order is a “draft”—an order that is in flight. 
     //You can’t activate a draft order unless you have a line item, and you can’t have a line item unless you have an order saved in the system.
-    public static String DRAFT_ORDER_STATUS = 'Draft';
+    public static final String DRAFT_ORDER_STATUS = 'Draft';
     // used to evaluate if an Order is Activated or not.
     public static String ACTIVATED_ORDER_STATUS = 'Activated';
     
