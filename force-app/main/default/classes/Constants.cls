@@ -24,6 +24,7 @@ public with sharing class Constants {
     // used to display user friendly error messages on Visualforce pages.
     public static final String ERROR_MESSAGE = 'An error has occurred, please take a screenshot with the URL and send it to IT.';
 
-    public static final Id STANDARD_PRICEBOOK_ID = '01s4E000000HlaXQAS';
+    // public static final Id STANDARD_PRICEBOOK_ID = '01s4E000000HlaXQAS';
+     public static final Id STANDARD_PRICEBOOK_ID = [SELECT Id From Pricebook2 WHERE IsStandard = true].Id;
 
 }
