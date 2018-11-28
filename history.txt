@@ -597,6 +597,95 @@ F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist\force-app\main\default\c
 F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist\force-app\main\default\classes>
 
 
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git push origin master
+Enumerating objects: 36, done.
+Counting objects: 100% (36/36), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (26/26), 624.38 KiB | 2.49 MiB/s, done.
+Total 26 (delta 10), reused 0 (delta 0)
+remote: Resolving deltas: 100% (10/10), completed with 5 local objects.
+To https://github.com/tjofr/AdvancedApexSpecialist.git
+   68e023d..dc09f50  master -> master
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:org:pull
+ !    force:org:pull is not a sfdx command.
+ !    Perhaps you meant force:org
+ !    Run sfdx help force for a list of available topics.
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:source:pull
+=== Pulled Source
+STATE  FULL NAME                                        TYPE            PROJECT PATH
+─────  ───────────────────────────────────────────────  ──────────────  ─────────────────────────────────────────────────────────────────────────────────────────────────
+Add    CustomLabels                                     CustomLabels    force-app\main\default\labels\CustomLabels.labels-meta.xml
+Add    Inventory_Setting__mdt                           CustomObject    force-app\main\default\objects\Inventory_Setting__mdt\Inventory_Setting__mdt.object-meta.xml
+Add    Inventory_Setting__mdt.Low_Quantity_Alert__c     CustomField     force-app\main\default\objects\Inventory_Setting__mdt\fields\Low_Quantity_Alert__c.field-meta.xml
+Add    Inventory_Setting__mdt-Inventory Setting Layout  Layout          force-app\main\default\layouts\Inventory_Setting__mdt-Inventory Setting Layout.layout-meta.xml
+Add    Custom%3A Marketing Profile                      Profile         force-app\main\default\profiles\Custom%3A Marketing Profile.profile-meta.xml
+Add    Custom%3A Support Profile                        Profile         force-app\main\default\profiles\Custom%3A Support Profile.profile-meta.xml
+Add    Admin                                            Profile         force-app\main\default\profiles\Admin.profile-meta.xml
+Add    Custom%3A Sales Profile                          Profile         force-app\main\default\profiles\Custom%3A Sales Profile.profile-meta.xml
+Add    Inventory_Setting.Beverage                       CustomMetadata  force-app\main\default\customMetadata\Inventory_Setting.Beverage.md-meta.xml
+Add    Inventory_Setting.Side                           CustomMetadata  force-app\main\default\customMetadata\Inventory_Setting.Side.md-meta.xml
+Add    Inventory_Setting.Dessert                        CustomMetadata  force-app\main\default\customMetadata\Inventory_Setting.Dessert.md-meta.xml
+Add    Inventory_Setting.Entree                         CustomMetadata  force-app\main\default\customMetadata\Inventory_Setting.Entree.md-meta.xml
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git add -A
+warning: LF will be replaced by CRLF in .sfdx/orgs/test-wtt8pll8phha@example.com/metadataTypeInfos.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .sfdx/orgs/test-wtt8pll8phha@example.com/sourcePathInfos.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in force-app/main/default/customMetadata/Inventory_Setting.Beverage.md-meta.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in force-app/main/default/customMetadata/Inventory_Setting.Dessert.md-meta.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in force-app/main/default/customMetadata/Inventory_Setting.Entree.md-meta.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in force-app/main/default/customMetadata/Inventory_Setting.Side.md-meta.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in force-app/main/default/labels/CustomLabels.labels-meta.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in force-app/main/default/layouts/Inventory_Setting__mdt-Inventory Setting Layout.layout-meta.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in force-app/main/default/objects/Inventory_Setting__mdt/Inventory_Setting__mdt.object-meta.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in force-app/main/default/objects/Inventory_Setting__mdt/fields/Low_Quantity_Alert__c.field-meta.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in force-app/main/default/profiles/Admin.profile-meta.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in force-app/main/default/profiles/Custom%3A Marketing Profile.profile-meta.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in force-app/main/default/profiles/Custom%3A Sales Profile.profile-meta.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in force-app/main/default/profiles/Custom%3A Support Profile.profile-meta.xml.
+The file will have its original line endings in your working directory
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git commit -m "Custom Metadata"
+[master 618613f] Custom Metadata
+ 15 files changed, 1978 insertions(+), 32 deletions(-)
+ create mode 100644 force-app/main/default/customMetadata/Inventory_Setting.Beverage.md-meta.xml
+ create mode 100644 force-app/main/default/customMetadata/Inventory_Setting.Dessert.md-meta.xml
+ create mode 100644 force-app/main/default/customMetadata/Inventory_Setting.Entree.md-meta.xml
+ create mode 100644 force-app/main/default/customMetadata/Inventory_Setting.Side.md-meta.xml
+ create mode 100644 force-app/main/default/labels/CustomLabels.labels-meta.xml
+ create mode 100644 force-app/main/default/layouts/Inventory_Setting__mdt-Inventory Setting Layout.layout-meta.xml
+ create mode 100644 force-app/main/default/objects/Inventory_Setting__mdt/Inventory_Setting__mdt.object-meta.xml
+ create mode 100644 force-app/main/default/objects/Inventory_Setting__mdt/fields/Low_Quantity_Alert__c.field-meta.xml
+ create mode 100644 force-app/main/default/profiles/Admin.profile-meta.xml
+ create mode 100644 force-app/main/default/profiles/Custom%3A Marketing Profile.profile-meta.xml
+ create mode 100644 force-app/main/default/profiles/Custom%3A Sales Profile.profile-meta.xml
+ create mode 100644 force-app/main/default/profiles/Custom%3A Support Profile.profile-meta.xml
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+
+
+
+
+
+
+
+
+
 
 
 
