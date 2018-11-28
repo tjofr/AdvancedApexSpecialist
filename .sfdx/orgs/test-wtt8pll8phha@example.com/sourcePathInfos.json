@@ -32,14 +32,14 @@
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 0,
             "modifiedTime": 1543399701056,
             "changeTime": 1543399701056,
-            "contentHash": "42350e244cf4de7f34d9c0b157d469bee92e99e3"
+            "contentHash": "42350e244cf4de7f34d9c0b157d469bee92e99e3",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ],
     [
@@ -374,14 +374,14 @@
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\objects",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\objects",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 0,
             "modifiedTime": 1543399700988,
             "changeTime": 1543399700988,
-            "contentHash": "0a58ffeb3f216621c5987e894a50e7678e5a1929"
+            "contentHash": "0a58ffeb3f216621c5987e894a50e7678e5a1929",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ],
     [
@@ -758,14 +758,14 @@
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\layouts",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\layouts",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 0,
             "modifiedTime": 1543399700993,
             "changeTime": 1543399700993,
-            "contentHash": "c7b94f28cdeb0391127e04b994c28c33499e87d4"
+            "contentHash": "c7b94f28cdeb0391127e04b994c28c33499e87d4",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ],
     [
@@ -784,14 +784,14 @@
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\Constants.cls",
         {
+            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\Constants.cls",
             "isDirectory": false,
-            "size": 1539,
-            "modifiedTime": 1543341517331,
-            "changeTime": 1543341517331,
-            "contentHash": "ead162d2ecd645fa34d343b137d48dd77e509c69",
             "isMetadataFile": false,
-            "state": "u"
+            "size": 1556,
+            "modifiedTime": 1543412759148,
+            "changeTime": 1543412759148,
+            "contentHash": "44e1c276f6798d74a75b978e6542ecc974e7f2fd"
         }
     ],
     [
@@ -810,222 +810,222 @@
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\labels\\CustomLabels.labels-meta.xml",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\labels\\CustomLabels.labels-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 689,
             "modifiedTime": 1543399700983,
             "changeTime": 1543399701059,
-            "contentHash": "ba5f9a341811b5ba3ccd1ee5151430851c1bc3d8"
+            "contentHash": "ba5f9a341811b5ba3ccd1ee5151430851c1bc3d8",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\objects\\Inventory_Setting__mdt\\Inventory_Setting__mdt.object-meta.xml",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\objects\\Inventory_Setting__mdt\\Inventory_Setting__mdt.object-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 241,
             "modifiedTime": 1543399700988,
             "changeTime": 1543399700988,
-            "contentHash": "5108b8b68313c075bba273d9ae288073ce74fab5"
+            "contentHash": "5108b8b68313c075bba273d9ae288073ce74fab5",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\objects\\Inventory_Setting__mdt\\fields\\Low_Quantity_Alert__c.field-meta.xml",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\objects\\Inventory_Setting__mdt\\fields\\Low_Quantity_Alert__c.field-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 434,
             "modifiedTime": 1543399700989,
             "changeTime": 1543399700989,
-            "contentHash": "0fbd75b7f84f6a0a1369030fc8e65f29b34743ad"
+            "contentHash": "0fbd75b7f84f6a0a1369030fc8e65f29b34743ad",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\layouts\\Inventory_Setting__mdt-Inventory Setting Layout.layout-meta.xml",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\layouts\\Inventory_Setting__mdt-Inventory Setting Layout.layout-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 2347,
             "modifiedTime": 1543399700993,
             "changeTime": 1543399700993,
-            "contentHash": "e0f86f419b16ed5063d8e879600138a229663fe6"
+            "contentHash": "e0f86f419b16ed5063d8e879600138a229663fe6",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\profiles\\Custom%3A Marketing Profile.profile-meta.xml",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\profiles\\Custom%3A Marketing Profile.profile-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 6424,
             "modifiedTime": 1543399700999,
             "changeTime": 1543399700999,
-            "contentHash": "2e020d21fe586bc79057cfcc4e3a9c808665a434"
+            "contentHash": "2e020d21fe586bc79057cfcc4e3a9c808665a434",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\profiles\\Custom%3A Support Profile.profile-meta.xml",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\profiles\\Custom%3A Support Profile.profile-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 6762,
             "modifiedTime": 1543399701006,
             "changeTime": 1543399701006,
-            "contentHash": "04ead9353482bf3b584bcaff5b9e0b069051fd34"
+            "contentHash": "04ead9353482bf3b584bcaff5b9e0b069051fd34",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\profiles\\Admin.profile-meta.xml",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\profiles\\Admin.profile-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 20045,
             "modifiedTime": 1543399701038,
             "changeTime": 1543399701038,
-            "contentHash": "ef51035e96d899fdf9786b1bcc9f60fbd2c22e8c"
+            "contentHash": "ef51035e96d899fdf9786b1bcc9f60fbd2c22e8c",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\profiles\\Custom%3A Sales Profile.profile-meta.xml",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\profiles\\Custom%3A Sales Profile.profile-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 6424,
             "modifiedTime": 1543399701044,
             "changeTime": 1543399701044,
-            "contentHash": "2e020d21fe586bc79057cfcc4e3a9c808665a434"
+            "contentHash": "2e020d21fe586bc79057cfcc4e3a9c808665a434",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\customMetadata\\Inventory_Setting.Beverage.md-meta.xml",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\customMetadata\\Inventory_Setting.Beverage.md-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 403,
             "modifiedTime": 1543399701056,
             "changeTime": 1543399701056,
-            "contentHash": "82ab3024816a6ead5d4a77f4e133dc4d17a38dd9"
+            "contentHash": "82ab3024816a6ead5d4a77f4e133dc4d17a38dd9",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\customMetadata\\Inventory_Setting.Side.md-meta.xml",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\customMetadata\\Inventory_Setting.Side.md-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 400,
             "modifiedTime": 1543399701058,
             "changeTime": 1543399701058,
-            "contentHash": "e08ce9b981b23ea9f744d46ecfe3ce798358494c"
+            "contentHash": "e08ce9b981b23ea9f744d46ecfe3ce798358494c",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\customMetadata\\Inventory_Setting.Dessert.md-meta.xml",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\customMetadata\\Inventory_Setting.Dessert.md-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 403,
             "modifiedTime": 1543399701060,
             "changeTime": 1543399701060,
-            "contentHash": "75358a60514a56c2055166dc231aa748ba7aa708"
+            "contentHash": "75358a60514a56c2055166dc231aa748ba7aa708",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\customMetadata\\Inventory_Setting.Entree.md-meta.xml",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\customMetadata\\Inventory_Setting.Entree.md-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 402,
             "modifiedTime": 1543399701061,
             "changeTime": 1543399701061,
-            "contentHash": "9a59a0a9acf9b6dbe343e2a1dd2cee43140cb2ff"
+            "contentHash": "9a59a0a9acf9b6dbe343e2a1dd2cee43140cb2ff",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\labels",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\labels",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 0,
             "modifiedTime": 1543399700982,
             "changeTime": 1543399701008,
-            "contentHash": "c3835cc038e1e9f66a66938c26f39887d32c77d8"
+            "contentHash": "c3835cc038e1e9f66a66938c26f39887d32c77d8",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ],
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\objects\\Inventory_Setting__mdt",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\objects\\Inventory_Setting__mdt",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 0,
             "modifiedTime": 1543399700989,
             "changeTime": 1543399700989,
-            "contentHash": "22cd0c3b7e46218e8ec4c801df41fcd34a7dbcc3"
+            "contentHash": "22cd0c3b7e46218e8ec4c801df41fcd34a7dbcc3",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ],
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\objects\\Inventory_Setting__mdt\\fields",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\objects\\Inventory_Setting__mdt\\fields",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 0,
             "modifiedTime": 1543399700989,
             "changeTime": 1543399700989,
-            "contentHash": "4e50a67599fad1c50ab84abd33f8e124324a0d60"
+            "contentHash": "4e50a67599fad1c50ab84abd33f8e124324a0d60",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ],
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\profiles",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\profiles",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 0,
             "modifiedTime": 1543399701044,
             "changeTime": 1543399701044,
-            "contentHash": "9c367b0e719eb8c48c5b0d9cbfb5f580a4bd6717"
+            "contentHash": "9c367b0e719eb8c48c5b0d9cbfb5f580a4bd6717",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ],
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\customMetadata",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\customMetadata",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 0,
             "modifiedTime": 1543399701061,
             "changeTime": 1543399701061,
-            "contentHash": "e4c6d38e799d1ccf78717cbe75d3ac378be30f4f"
+            "contentHash": "e4c6d38e799d1ccf78717cbe75d3ac378be30f4f",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ]
 ]

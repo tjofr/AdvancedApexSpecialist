@@ -8,7 +8,10 @@ public with sharing class Constants {
     public static final String INVENTORY_LEVEL_LOW = 'Has a low inventory';
     // used to populate picklist values in Visualforce pages.
     public static final List<Schema.PicklistEntry> PRODUCT_FAMILY;
-
+    static {
+        Schema.DescribeFieldResult fieldResult = Product2.Family.getDescribe();
+        PRODUCT_FAMILY = fieldResult.getPicklistValues();
+    }
     // order statuses
     // used to indicate that an order is a “draft”—an order that is in flight. 
     //You can’t activate a draft order unless you have a line item, and you can’t have a line item unless you have an order saved in the system.
@@ -23,8 +26,4 @@ public with sharing class Constants {
 
     public static Id STANDARD_PRICEBOOK_ID = '01s4E000000HlaXQAS';
 
-    public Constants() {
-        Schema.DescribeFieldResult fieldResult = Product2.Family.getDescribe();
-        PRODUCT_FAMILY = fieldResult.getPicklistValues();
-    }
 }
