@@ -345,6 +345,256 @@ cs83.my.salesforce.com//secur/frontdoor.jsp?sid=00D4E0000001Rxn!ARcAQA4EDXUZxEqp
 I4AEmAoAyENMqnAYLIoEGW16rLo6
 
 F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist\force-app\main\default\classes>dir
+ Le volume dans le lecteur F s’appelle Work
+ Le numéro de série du volume est B4DB-4244
+
+ Répertoire de F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist\force-app\main\default\classes
+
+23/11/2018  23:26    <REP>          .
+23/11/2018  23:26    <REP>          ..
+23/11/2018  23:26             1 141 AnnouncementQueueable.cls
+23/11/2018  23:26               174 AnnouncementQueueable.cls-meta.xml
+23/11/2018  23:26               662 ChartHelper.cls
+23/11/2018  23:26               174 ChartHelper.cls-meta.xml
+23/11/2018  23:26             3 042 OrderExtension.cls
+23/11/2018  23:26               174 OrderExtension.cls-meta.xml
+23/11/2018  23:26             1 310 OrderHelper.cls
+23/11/2018  23:26               174 OrderHelper.cls-meta.xml
+23/11/2018  23:26                56 OrderTests.cls
+23/11/2018  23:26               174 OrderTests.cls-meta.xml
+23/11/2018  23:26             4 691 PackageTests.cls
+23/11/2018  23:26               174 PackageTests.cls-meta.xml
+23/11/2018  23:26               886 Product2Extension.cls
+23/11/2018  23:26               174 Product2Extension.cls-meta.xml
+23/11/2018  23:26             1 980 Product2Helper.cls
+23/11/2018  23:26               174 Product2Helper.cls-meta.xml
+23/11/2018  23:26               392 Product2Tests.cls
+23/11/2018  23:26               174 Product2Tests.cls-meta.xml
+23/11/2018  23:26             3 480 TestDataFactory.cls
+23/11/2018  23:26               174 TestDataFactory.cls-meta.xml
+              20 fichier(s)           19 380 octets
+               2 Rép(s)  94 392 782 848 octets libres
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist\force-app\main\default\classes>type PackageTests.cls
+/**
+ * @name PackageTests
+ * @description This class provide test coverage for code included in the unmanaged package
+**/
+@isTest
+private class PackageTests {
+
+
+    /**
+     * @name chartHelper_UnitTest
+     * @description Test coverage for the packaged version of the chartHelper class
+    **/
+    static TestMethod void chartHelper_UnitTest(){
+        chartHelper.chartData c = new chartHelper.chartData('test',1);
+    }
+
+    /**
+     * @name orderTrigger_UnitTest
+     * @description Test coverage for the packaged version of the orderTrigger and orderHelper class
+    **/
+    static TestMethod void orderTrigger_UnitTest(){
+        Test.startTest();
+            Id standardPricebookId = test.getStandardPricebookId();
+            orderHelper.afterUpdate(new List<Order>(), new List<Order>());
+            orderHelper.rollUpOrderItems(new Set<Id>());
+            Product2 testProduct = new Product2(Name='Test',isActive=true,Family='Entree',Initial_Inventory__c=21);
+            insert testProduct;
+            PricebookEntry testPricebookEntry = new PricebookEntry(Product2Id=testProduct.Id,Pricebook2Id=standardPricebookId,UnitP
+ice=1);
+            insert testPricebookEntry;
+
+            testProduct.Quantity_Ordered__c = 1;
+            update testProduct;
+
+            Account testAccount = new Account(Name='Test');
+            insert testAccount;
+
+            Order testOrder = new Order();
+            testOrder.AccountId = testAccount.Id;
+            testOrder.EffectiveDate = date.newInstance(2017,1,1);
+            testOrder.Status = 'Draft';
+            testOrder.Pricebook2Id = standardPricebookId;
+            insert testOrder;
+
+            OrderItem testOrderItem = new OrderItem();
+            testOrderItem.OrderId = testOrder.Id;
+            testOrderItem.PricebookEntryId = testPricebookEntry.Id;
+            testOrderItem.Quantity = 1;
+            testOrderItem.UnitPrice = 1;
+            insert testOrderItem;
+
+            delete testOrder;
+            undelete testOrder;
+
+            testOrder.Status = 'Activated';
+            update testOrder;
+        Test.stopTest();
+    }
+
+    /**
+     * @name product2Helper_UnitTest
+     * @description Test coverage for the packaged version of the product2Helper class
+    **/
+    static TestMethod void product2Helper_UnitTest(){
+        Test.startTest();
+            Product2 testProduct = new product2(Name='Test',Family='Entree',Initial_Inventory__c=0);
+            insert testProduct;
+            product2Helper.afterUpdate();
+            product2Helper.postAlerts(new List<Product2>{testProduct});
+        Test.stopTest();
+    }
+
+    /**
+     * @name product2Extension_UnitTest
+     * @description Test coverage for the packaged version of the product2Extension class
+    **/
+    static TestMethod void product2Extension_UnitTest(){
+        Test.startTest();
+            product2Extension ext = new product2Extension();
+            ext.getInventory();
+            ext.addRows();
+            ext.save();
+        Test.stopTest();
+    }
+
+    /**
+     * @name announcementQueueable_UnitTest
+     * @description Test coverage for the packaged version of the announcementQueueable class
+    **/
+    static TestMethod void announcementQueueable_UnitTest(){
+        Test.startTest();
+            List<ConnectApi.AnnouncementInput> announcements = new List<ConnectApi.AnnouncementInput>();
+            announcementQueueable cls = new announcementQueueable();
+            cls.toPost = announcements;
+            try {
+                announcementQueueable.postAnnouncements(announcements);
+            } catch ( Exception e ){
+
+            }
+        Test.stopTest();
+    }
+
+    /**
+     * @name orderExtension_UnitTest
+     * @description Test coverage for the packaged version of the orderExtension
+    **/
+    static TestMethod void orderExtension_UnitTest(){
+        Test.startTest();
+            Account testAccount = new Account(Name='Test');
+            insert testAccount;
+            Contact testContact = new Contact(LastName='Test',AccountId=testAccount.Id);
+            insert testContact;
+            Order testOrder = new Order(AccountId=testAccount.Id,EffectiveDate=system.today(),Status='Draft');
+            insert testOrder;
+            orderExtension ext = new orderExtension(new ApexPages.standardController(testOrder));
+            ext.getFamilyOptions();
+            ext.onFieldChange();
+            ext.save();
+            ext.selectFamily();
+            ext.first();
+            ext.next();
+            ext.previous();
+            ext.last();
+            ext.getHasPrevious();
+            ext.getHasNext();
+            ext.getTotalPages();
+            ext.getPageNumber();
+        Test.stopTest();
+    }
+
+}
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist\force-app\main\default\classes>sfdx force:source:push
+=== Pushed Source
+STATE    FULL NAME     TYPE       PROJECT PATH
+───────  ────────────  ─────────  ────────────────────────────────────────────────────────
+Deleted  PackageTests  ApexClass  force-app\main\default\classes\PackageTests.cls
+Deleted  PackageTests  ApexClass  force-app\main\default\classes\PackageTests.cls-meta.xml
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist\force-app\main\default\classes>git add -A
+warning: LF will be replaced by CRLF in .sfdx/orgs/test-wtt8pll8phha@example.com/metadataTypeInfos.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .sfdx/orgs/test-wtt8pll8phha@example.com/sourcePathInfos.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .sfdx/orgs/test-wtt8pll8phha@example.com/sourcePathInfos.json.bak.
+The file will have its original line endings in your working directory
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist\force-app\main\default\classes>git commit -m "remove PackageTest"
+[master b57c634] remove PackageTest
+ 4 files changed, 267 insertions(+), 307 deletions(-)
+ delete mode 100644 force-app/main/default/classes/PackageTests.cls
+ delete mode 100644 force-app/main/default/classes/PackageTests.cls-meta.xml
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist\force-app\main\default\classes>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../../../../.sfdx/tools/
+        ../../../../.vscode/
+        Constants.cls
+        Constants.cls-meta.xml
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist\force-app\main\default\classes>git add -A
+warning: LF will be replaced by CRLF in force-app/main/default/classes/Constants.cls.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in force-app/main/default/classes/Constants.cls-meta.xml.
+The file will have its original line endings in your working directory
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist\force-app\main\default\classes>git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   ../../../../.sfdx/tools/apex.db
+        new file:   ../../../../.vscode/settings.json
+        new file:   Constants.cls
+        new file:   Constants.cls-meta.xml
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   ../../../../.sfdx/tools/apex.db
+
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist\force-app\main\default\classes>sfdx force:source:push
+PROJECT PATH                                  ERROR
+────────────────────────────────────────────  ────────────────────────────────────────────────────
+force-app\main\default\classes\Constants.cls  Variable does not exist: Product2.Country__c (27:50)
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist\force-app\main\default\classes>sfdx force:source:push
+=== Pushed Source
+STATE  FULL NAME  TYPE       PROJECT PATH
+─────  ─────────  ─────────  ─────────────────────────────────────────────────────
+Add    Constants  ApexClass  force-app\main\default\classes\Constants.cls
+Add    Constants  ApexClass  force-app\main\default\classes\Constants.cls-meta.xml
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist\force-app\main\default\classes>git add -A
+warning: LF will be replaced by CRLF in .sfdx/orgs/test-wtt8pll8phha@example.com/metadataTypeInfos.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .sfdx/orgs/test-wtt8pll8phha@example.com/sourcePathInfos.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .sfdx/orgs/test-wtt8pll8phha@example.com/sourcePathInfos.json.bak.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in force-app/main/default/classes/Constants.cls.
+The file will have its original line endings in your working directory
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist\force-app\main\default\classes>git commit -m "Constants created"
+[master dc09f50] Constants created
+ 6 files changed, 121 insertions(+), 81 deletions(-)
+ create mode 100644 .sfdx/tools/apex.db
+ create mode 100644 .vscode/settings.json
+ create mode 100644 force-app/main/default/classes/Constants.cls
+ create mode 100644 force-app/main/default/classes/Constants.cls-meta.xml
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist\force-app\main\default\classes>
 
 
 
