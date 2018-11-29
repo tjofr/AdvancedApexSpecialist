@@ -10,11 +10,24 @@ public with sharing class OrderHelper {
     public static void AfterUpdate(List<Order> newList, List<Order> oldList){
         Set<Id> orderIds = new Set<Id>();
         for ( Integer i=0; i<newList.size(); i++ ){
-            if ( newList[i].Status == 'Activation' && oldList[i].Status != 'Activate' ){
+            if ( newList[i].Status == 'Activated' && oldList[i].Status != 'Draft' ){
                 orderIds.add(newList[i].Id);
             }
         }
+        AggregateResult[] groupedResults = 
+                            [select Product2Id, sum(Quantity) TotalQuantity from orderItem
+                             where Id in (:orderIds)
+                             group by Product2Id];
+        Product2[] prds2update = new Product2[]{};
+        for (AggregateResult ar : groupedResults) {
+            Product2 prd = new Product2(id=ar.get('Product2Id'));
+            prd.Quantity_Ordered__c += ar.get('TotalQuantity');
+            system.debug('Prd '+prd.id+' Qte '+prd.Quantity_Ordered__c);
+            prds2update.add(prd);
+        }
+        update prds2update;
     }
+    
 
     /**
      * @name RollUpOrderItems
