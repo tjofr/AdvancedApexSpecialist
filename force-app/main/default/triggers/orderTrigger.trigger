@@ -4,5 +4,5 @@
 **/
 trigger orderTrigger on Order (after update)
 {
-    OrderHelper(TGrigger.new,Trigger.old);
+    OrderHelper.AfterUpdate(Trigger.new,Trigger.old);
 }

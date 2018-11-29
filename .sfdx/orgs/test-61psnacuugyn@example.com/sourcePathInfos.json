@@ -227,16 +227,15 @@
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\OrderHelper.cls",
         {
+            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\OrderHelper.cls",
             "isDirectory": false,
-            "size": 1310,
-            "modifiedTime": 1543011999055,
-            "changeTime": 1543011999789,
-            "contentHash": "617a2175754b6a54dbc360fd2a8302c1ec03c1ee",
             "isMetadataFile": false,
-            "state": "u",
+            "size": 2222,
+            "modifiedTime": 1543512749865,
+            "changeTime": 1543512749865,
             "isWorkspace": false,
-            "isArtifactRoot": false
+            "contentHash": "e7b3fa023d36185047a40719cd36442cc3f6a476"
         }
     ],
     [
@@ -992,14 +991,14 @@
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\standardValueSets\\Product2Family.standardValueSet-meta.xml",
         {
-            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\standardValueSets\\Product2Family.standardValueSet-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 715,
             "modifiedTime": 1543495840409,
             "changeTime": 1543495840454,
-            "contentHash": "5282c3ef83c8f0f6220fabdd0c5b9f952a957d51"
+            "contentHash": "5282c3ef83c8f0f6220fabdd0c5b9f952a957d51",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
@@ -1022,14 +1021,13 @@
         {
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\triggers\\orderTrigger.trigger",
             "isDirectory": false,
-            "size": 800,
-            "modifiedTime": 1543011999504,
-            "changeTime": 1543012002899,
-            "contentHash": "2f6be77d79a548581f714f6bffb3f0a4a97f021f",
+            "size": 148,
+            "modifiedTime": 1543502537824,
+            "changeTime": 1543502537824,
+            "contentHash": "c77d7bbfa4fc2b3e46159551f35dd9c565acca5c",
             "isMetadataFile": false,
             "state": "u",
-            "isWorkspace": false,
-            "isArtifactRoot": false
+            "isWorkspace": false
         }
     ],
     [
@@ -1080,16 +1078,15 @@
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist",
         {
+            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist",
             "isDirectory": true,
-            "size": 0,
-            "modifiedTime": 1543419844483,
-            "changeTime": 1543419844483,
-            "contentHash": "7dda744cc0730285a7ce0961671f9ef0d911cf25",
             "isMetadataFile": false,
-            "state": "u",
+            "size": 0,
+            "modifiedTime": 1543512846452,
+            "changeTime": 1543512846452,
             "isWorkspace": true,
-            "isArtifactRoot": false
+            "contentHash": "7dda744cc0730285a7ce0961671f9ef0d911cf25"
         }
     ]
 ]
