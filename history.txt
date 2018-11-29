@@ -297,8 +297,7 @@ Successfully created scratch org: 00D4E0000001RxnUAE, username: test-wtt8pll8phh
 F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:source:push
 === Pushed Source
 STATE  FULL NAME                         TYPE               PROJECT PATH
-─────  ────────────────────────────────  ─────────────────  ────────────────────────────────────────────────────────────────────────
-─────────────────────
+─────  ────────────────────────────────  ─────────────────  ─────────────────────────────────────────────────────────────────────────────────────────────
 Add    New_Millennium_Delivery           CustomApplication  force-app\main\default\applications\New_Millennium_Delivery.app-meta.xml
 Add    AnnouncementQueueable             ApexClass          force-app\main\default\classes\AnnouncementQueueable.cls
 Add    AnnouncementQueueable             ApexClass          force-app\main\default\classes\AnnouncementQueueable.cls-meta.xml
@@ -853,6 +852,340 @@ Waiting for the package install request to complete. Status = IN_PROGRESS
 Successfully installed package [04t2I000000T4RnQAK]
 
 F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+// give up on that and
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:source:push
+=== Pushed Source
+STATE    FULL NAME  TYPE       PROJECT PATH
+───────  ─────────  ─────────  ────────────────────────────────────────────
+Changed  Constants  ApexClass  force-app\main\default\classes\Constants.cls
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git add -A
+warning: LF will be replaced by CRLF in .sfdx/orgs/test-wtt8pll8phha@example.com/metadataTypeInfos.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .sfdx/orgs/test-wtt8pll8phha@example.com/sourcePathInfos.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .sfdx/orgs/test-wtt8pll8phha@example.com/sourcePathInfos.json.bak.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .sfdx/orgs/thierry.jorand@gmail.com/metadataTypeInfos.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in force-app/main/default/classes/Constants.cls.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in sfdx-project.json.
+The file will have its original line endings in your working directory
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git commit -m "SOQL request for STANDARD_PRICEBOOK_ID"
+[master b7c8e82] SOQL request for STANDARD_PRICEBOOK_ID
+ 4 files changed, 12 insertions(+), 10 deletions(-)
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:package:version:create -p AdvancedApexSpecialist -d force-app -k
+test1234 --wait 10
+Request in progress. Sleeping 30 seconds. Will wait a total of 600 more seconds before timing out. Current Status='InProgress'
+Request in progress. Sleeping 30 seconds. Will wait a total of 570 more seconds before timing out. Current Status='InProgress'
+Request in progress. Sleeping 30 seconds. Will wait a total of 540 more seconds before timing out. Current Status='InProgress'
+Request in progress. Sleeping 30 seconds. Will wait a total of 510 more seconds before timing out. Current Status='InProgress'
+Request in progress. Sleeping 30 seconds. Will wait a total of 480 more seconds before timing out. Current Status='InProgress'
+sfdx-project.json has been updated.
+Successfully created the package version [08c2I0000004C9SQAU]. Subscriber Package Version Id: 04t2I000000T4RxQAK.
+Package Installation URL: https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2I000000T4RxQAK
+As an alternative, you can use the "sfdx force:package:install" command.
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:package:install --wait 10 --publishwait 10 --package AdvancedApexSpecialist@1.0.0-4  -k test1234 -r -u ApexAdvancedSpecialistTP
+Waiting for the Subscriber Package Version ID to be published to the target org.
+Waiting for the Subscriber Package Version ID to be published to the target org.
+Waiting for the Subscriber Package Version ID to be published to the target org.
+Waiting for the Subscriber Package Version ID to be published to the target org.
+Waiting for the package install request to complete. Status = IN_PROGRESS
+Successfully installed package [04t2I000000T4RxQAK]
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+
+rem Modify manually Product2.Family not yet supported
+
+SOQL request to get data :
+"select Product2.name,Product2.Family,Product2.Initial_Inventory__c,Product2.Quantity_Ordered__c, Product2.isActive,unitPrice From PriceBookEntry"
+
+
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx  force:data:tree:export -q "select Product2.name,Product2.Family,Product2.Initial_Inventory__c,Product2.Quantity_Ordered__c, Product2.isActive,unitPrice From PriceBookEntry" -u ApexAdvancedSpecialistTP -d data
+Wrote 12 records to data\PricebookEntry.json
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>type data\PricebookEntry.json
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "PricebookEntry",
+                "referenceId": "PricebookEntryRef1"
+            },
+            "Product2": {
+                "attributes": {
+                    "type": "Product2",
+                    "url": "/services/data/v44.0/sobjects/Product2/01t1t0000016I8IAAU"
+                },
+                "Name": "Pizza",
+                "Family": "Entree",
+                "Initial_Inventory__c": 25,
+                "Quantity_Ordered__c": 0,
+                "IsActive": true
+            },
+            "UnitPrice": 25
+        },
+        {
+            "attributes": {
+                "type": "PricebookEntry",
+                "referenceId": "PricebookEntryRef2"
+            },
+            "Product2": {
+                "attributes": {
+                    "type": "Product2",
+                    "url": "/services/data/v44.0/sobjects/Product2/01t1t0000016I8JAAU"
+                },
+                "Name": "Garlic Bread",
+                "Family": "Side",
+                "Initial_Inventory__c": 20,
+                "Quantity_Ordered__c": 0,
+                "IsActive": true
+            },
+            "UnitPrice": 6
+        },
+        {
+            "attributes": {
+                "type": "PricebookEntry",
+                "referenceId": "PricebookEntryRef3"
+            },
+            "Product2": {
+                "attributes": {
+                    "type": "Product2",
+                    "url": "/services/data/v44.0/sobjects/Product2/01t1t0000016I8KAAU"
+                },
+                "Name": "Chocolate Cake",
+                "Family": "Dessert",
+                "Initial_Inventory__c": 15,
+                "Quantity_Ordered__c": 0,
+                "IsActive": true
+            },
+            "UnitPrice": 5
+        },
+        {
+            "attributes": {
+                "type": "PricebookEntry",
+                "referenceId": "PricebookEntryRef4"
+            },
+            "Product2": {
+                "attributes": {
+                    "type": "Product2",
+                    "url": "/services/data/v44.0/sobjects/Product2/01t1t0000016I8LAAU"
+                },
+                "Name": "Coconut Water",
+                "Family": "Beverage",
+                "Initial_Inventory__c": 10,
+                "Quantity_Ordered__c": 0,
+                "IsActive": true
+            },
+            "UnitPrice": 3
+        },
+        {
+            "attributes": {
+                "type": "PricebookEntry",
+                "referenceId": "PricebookEntryRef5"
+            },
+            "Product2": {
+                "attributes": {
+                    "type": "Product2",
+                    "url": "/services/data/v44.0/sobjects/Product2/01t1t0000016I8MAAU"
+                },
+                "Name": "Hamburger",
+                "Family": "Entree",
+                "Initial_Inventory__c": 25,
+                "Quantity_Ordered__c": 0,
+                "IsActive": true
+            },
+            "UnitPrice": 20
+        },
+        {
+            "attributes": {
+                "type": "PricebookEntry",
+                "referenceId": "PricebookEntryRef6"
+            },
+            "Product2": {
+                "attributes": {
+                    "type": "Product2",
+                    "url": "/services/data/v44.0/sobjects/Product2/01t1t0000016I8NAAU"
+                },
+                "Name": "French Fries",
+                "Family": "Side",
+                "Initial_Inventory__c": 20,
+                "Quantity_Ordered__c": 0,
+                "IsActive": true
+            },
+            "UnitPrice": 6
+        },
+        {
+            "attributes": {
+                "type": "PricebookEntry",
+                "referenceId": "PricebookEntryRef7"
+            },
+            "Product2": {
+                "attributes": {
+                    "type": "Product2",
+                    "url": "/services/data/v44.0/sobjects/Product2/01t1t0000016I8OAAU"
+                },
+                "Name": "Carrot Cake",
+                "Family": "Dessert",
+                "Initial_Inventory__c": 15,
+                "Quantity_Ordered__c": 0,
+                "IsActive": true
+            },
+            "UnitPrice": 5
+        },
+        {
+            "attributes": {
+                "type": "PricebookEntry",
+                "referenceId": "PricebookEntryRef8"
+            },
+            "Product2": {
+                "attributes": {
+                    "type": "Product2",
+                    "url": "/services/data/v44.0/sobjects/Product2/01t1t0000016I8PAAU"
+                },
+                "Name": "Lemonade",
+                "Family": "Beverage",
+                "Initial_Inventory__c": 10,
+                "Quantity_Ordered__c": 0,
+                "IsActive": true
+            },
+            "UnitPrice": 3
+        },
+        {
+            "attributes": {
+                "type": "PricebookEntry",
+                "referenceId": "PricebookEntryRef9"
+            },
+            "Product2": {
+                "attributes": {
+                    "type": "Product2",
+                    "url": "/services/data/v44.0/sobjects/Product2/01t1t0000016I8QAAU"
+                },
+                "Name": "Hot Dog",
+                "Family": "Entree",
+                "Initial_Inventory__c": 25,
+                "Quantity_Ordered__c": 0,
+                "IsActive": true
+            },
+            "UnitPrice": 10
+        },
+        {
+            "attributes": {
+                "type": "PricebookEntry",
+                "referenceId": "PricebookEntryRef10"
+            },
+            "Product2": {
+                "attributes": {
+                    "type": "Product2",
+                    "url": "/services/data/v44.0/sobjects/Product2/01t1t0000016I8RAAU"
+                },
+                "Name": "Onion Rings",
+                "Family": "Side",
+                "Initial_Inventory__c": 20,
+                "Quantity_Ordered__c": 0,
+                "IsActive": true
+            },
+            "UnitPrice": 6
+        },
+        {
+            "attributes": {
+                "type": "PricebookEntry",
+                "referenceId": "PricebookEntryRef11"
+            },
+            "Product2": {
+                "attributes": {
+                    "type": "Product2",
+                    "url": "/services/data/v44.0/sobjects/Product2/01t1t0000016I8SAAU"
+                },
+                "Name": "Jello",
+                "Family": "Dessert",
+                "Initial_Inventory__c": 15,
+                "Quantity_Ordered__c": 0,
+                "IsActive": true
+            },
+            "UnitPrice": 2.5
+        },
+        {
+            "attributes": {
+                "type": "PricebookEntry",
+                "referenceId": "PricebookEntryRef12"
+            },
+            "Product2": {
+                "attributes": {
+                    "type": "Product2",
+                    "url": "/services/data/v44.0/sobjects/Product2/01t1t0000016I8TAAU"
+                },
+                "Name": "Iced Tea",
+                "Family": "Beverage",
+                "Initial_Inventory__c": 10,
+                "Quantity_Ordered__c": 0,
+                "IsActive": true
+            },
+            "UnitPrice": 3
+        }
+    ]
+}
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx  force:data:tree:export -p -q "select id,name,Family,Initial_Inventory__c,Quantity_Ordered__c,isActive, (select id,unitPrice From PriceBookEntries) from Product2" -u ApexAdvancedSpecialistTP -d data
+Wrote 12 records to data\Product2s.json
+Wrote 12 records to data\PricebookEntrys.json
+Wrote 0 records to data\Product2-PricebookEntry-plan.json
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>type data\Product2-PricebookEntry-plan.json
+[
+    {
+        "sobject": "Product2",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "Product2s.json"
+        ]
+    },
+    {
+        "sobject": "PricebookEntry",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "PricebookEntrys.json"
+        ]
+    }
+]
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
+
+
+Give up on all data import....
+Import product only and make standard price mannually
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx  force:data:tree:export  -q "select id,name,Family,Initial_Inventory__
+,Quantity_Ordered__c,isActive from Product2" -u ApexAdvancedSpecialistTP -d data
+Wrote 12 records to data\Product2.json
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:data:tree:import -f data\Product2.json
+=== Import Results
+REFERENCE ID   TYPE      ID
+─────────────  ────────  ──────────────────
+Product2Ref1   Product2  01t4E000003jKY4QAM
+Product2Ref2   Product2  01t4E000003jKY5QAM
+Product2Ref3   Product2  01t4E000003jKY6QAM
+Product2Ref4   Product2  01t4E000003jKY7QAM
+Product2Ref5   Product2  01t4E000003jKY8QAM
+Product2Ref6   Product2  01t4E000003jKY9QAM
+Product2Ref7   Product2  01t4E000003jKYAQA2
+Product2Ref8   Product2  01t4E000003jKYBQA2
+Product2Ref9   Product2  01t4E000003jKYCQA2
+Product2Ref10  Product2  01t4E000003jKYDQA2
+Product2Ref11  Product2  01t4E000003jKYEQA2
+Product2Ref12  Product2  01t4E000003jKYFQA2
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist> 
+rem check with select name, Family, Initial_Inventory__c, Quantity_Ordered__c, isActive, (select unitPrice From PriceBookEntries) from Product2
+
+
 
 
 
