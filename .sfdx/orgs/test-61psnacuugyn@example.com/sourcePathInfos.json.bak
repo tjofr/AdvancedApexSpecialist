@@ -231,11 +231,11 @@
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\OrderHelper.cls",
             "isDirectory": false,
             "isMetadataFile": false,
-            "size": 2219,
-            "modifiedTime": 1543506121767,
-            "changeTime": 1543506121767,
+            "size": 2222,
+            "modifiedTime": 1543512749865,
+            "changeTime": 1543512749865,
             "isWorkspace": false,
-            "contentHash": "7b6705f637b672250a0474883d11831cc0702230"
+            "contentHash": "e7b3fa023d36185047a40719cd36442cc3f6a476"
         }
     ],
     [
@@ -1078,15 +1078,15 @@
     [
         "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist",
         {
+            "state": "u",
             "sourcePath": "F:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist",
             "isDirectory": true,
-            "size": 0,
-            "modifiedTime": 1543497816767,
-            "changeTime": 1543497816767,
-            "contentHash": "5834c82f434b07357ee739d362c26f08c841cf6d",
             "isMetadataFile": false,
-            "state": "u",
-            "isWorkspace": true
+            "size": 0,
+            "modifiedTime": 1543512846452,
+            "changeTime": 1543512846452,
+            "isWorkspace": true,
+            "contentHash": "7dda744cc0730285a7ce0961671f9ef0d911cf25"
         }
     ]
 ]
