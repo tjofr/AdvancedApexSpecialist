@@ -696,8 +696,7 @@ Successfully created scratch org: 00D0E0000001dQJUAY, username: test-xxsi6mnbxhf
 F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>
 rem update sfdx-project.json to 1.0 instead 0.1
 rem create package version
-F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:package:version:create -p AdvancedApexSpecialist -d force-app -k
-test1234 --wait 10
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:package:version:create -p AdvancedApexSpecialist -d force-app -k test1234 --wait 10
 Request in progress. Sleeping 30 seconds. Will wait a total of 600 more seconds before timing out. Current Status='InProgress'
 Request in progress. Sleeping 30 seconds. Will wait a total of 570 more seconds before timing out. Current Status='InProgress'
 Request in progress. Sleeping 30 seconds. Will wait a total of 540 more seconds before timing out. Current Status='InProgress'
@@ -877,8 +876,7 @@ F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>git commit -m "SOQL requ
 [master b7c8e82] SOQL request for STANDARD_PRICEBOOK_ID
  4 files changed, 12 insertions(+), 10 deletions(-)
 
-F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:package:version:create -p AdvancedApexSpecialist -d force-app -k
-test1234 --wait 10
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:package:version:create -p AdvancedApexSpecialist -d force-app -k test1234 --wait 10
 Request in progress. Sleeping 30 seconds. Will wait a total of 600 more seconds before timing out. Current Status='InProgress'
 Request in progress. Sleeping 30 seconds. Will wait a total of 570 more seconds before timing out. Current Status='InProgress'
 Request in progress. Sleeping 30 seconds. Will wait a total of 540 more seconds before timing out. Current Status='InProgress'
@@ -1185,6 +1183,41 @@ Product2Ref12  Product2  01t4E000003jKYFQA2
 F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist> 
 rem check with select name, Family, Initial_Inventory__c, Quantity_Ordered__c, isActive, (select unitPrice From PriceBookEntries) from Product2
 
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:package:version:create -p AdvancedApexSpecialist -d force-app -k
+test1234 --wait 10
+Request in progress. Sleeping 30 seconds. Will wait a total of 600 more seconds before timing out. Current Status='InProgress'
+Request in progress. Sleeping 30 seconds. Will wait a total of 570 more seconds before timing out. Current Status='InProgress'
+Request in progress. Sleeping 30 seconds. Will wait a total of 540 more seconds before timing out. Current Status='InProgress'
+Request in progress. Sleeping 30 seconds. Will wait a total of 510 more seconds before timing out. Current Status='InProgress'
+ERROR:  Product2Tests: Constructor not defined: [Product2Extension].<Constructor>(),
+Admin: In field: apexClass - no ApexClass named Product2Tests found,
+Custom%3A Marketing Profile: In field: apexClass - no ApexClass named Product2Tests found,
+Custom%3A Sales Profile: In field: apexClass - no ApexClass named Product2Tests found,
+Custom%3A Support Profile: In field: apexClass - no ApexClass named Product2Tests found.
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:package:version:create -p AdvancedApexSpecialist -d force-app -k test1234 --wait 10
+Request in progress. Sleeping 30 seconds. Will wait a total of 600 more seconds before timing out. Current Status='InProgress'
+Request in progress. Sleeping 30 seconds. Will wait a total of 570 more seconds before timing out. Current Status='InProgress'
+Request in progress. Sleeping 30 seconds. Will wait a total of 540 more seconds before timing out. Current Status='InProgress'
+Request in progress. Sleeping 30 seconds. Will wait a total of 510 more seconds before timing out. Current Status='InProgress'
+sfdx-project.json has been updated.
+Successfully created the package version [08c2I0000004C9rQAE]. Subscriber Package Version Id: 04t2I000000T4SlQAK.
+Package Installation URL: https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2I000000T4SlQAK
+As an alternative, you can use the "sfdx force:package:install" command.
+
+
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:package:install --wait 10 --publishwait 10 --package AdvancedApex
+Specialist@1.0.2-1  -k test1234 -r -u ApexAdvancedSpecialistTP
+Waiting for the Subscriber Package Version ID to be published to the target org.
+....
+Waiting for the Subscriber Package Version ID to be published to the target org.
+Waiting for the Subscriber Package Version ID to be published to the target org.
+Waiting for the Subscriber Package Version ID to be published to the target org.
+Waiting for the package install request to complete. Status = IN_PROGRESS
+Waiting for the package install request to complete. Status = IN_PROGRESS
+Waiting for the package install request to complete. Status = IN_PROGRESS
+Successfully installed package [04t2I000000T4SlQAK]
 
 
 

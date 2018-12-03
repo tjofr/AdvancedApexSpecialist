@@ -5,7 +5,7 @@
             "default": true,
             "package": "AdvancedApexSpecialist",
             "versionName": "ver 1.0",
-            "versionNumber": "1.0.0.NEXT"
+            "versionNumber": "1.0.2.NEXT"
         }
     ],
     "namespace": "",
@@ -16,6 +16,7 @@
         "AdvancedApexSpecialist@1.0.0-1": "04t2I000000T4RiQAK",
         "AdvancedApexSpecialist@1.0.0-2": "04t2I000000T4RnQAK",
         "AdvancedApexSpecialist@1.0.0-3": "04t2I000000T4RsQAK",
-        "AdvancedApexSpecialist@1.0.0-4": "04t2I000000T4RxQAK"
+        "AdvancedApexSpecialist@1.0.0-4": "04t2I000000T4RxQAK",
+        "AdvancedApexSpecialist@1.0.2-1": "04t2I000000T4SlQAK"
     }
 }

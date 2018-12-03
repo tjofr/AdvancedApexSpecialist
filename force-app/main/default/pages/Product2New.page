@@ -1,4 +1,4 @@
-<apex:page controller="Product2Extension" >
+<apex:page standardController ="Product2" extensions="Product2Extension" >
     <apex:sectionHeader title="New Product" subtitle="Add Inventory" />
     <apex:pageMessages id="pageMessages" />
     <apex:form id="form" >
@@ -15,21 +15,22 @@
                 </apex:pageBlockButtons>
 
                 <apex:pageBlockTable value="{!productsToInsert}" var="p" id="orderItemTable" >
-                    <apex:column headerValue="Name" >
-                        <apex:inputText value="{!p.Name}" />
+                    <apex:column headerValue="{!$ObjectType.Product2.Fields.name.label}" >
+                        <apex:inputText value="{!p.productRecord.Name}" />
                     </apex:column>
-                    <apex:column headerValue="Family" >
-                        <apex:selectList value="{!p.Family}" size="1" multiselect="false" >
+                    <apex:column headerValue="{!$ObjectType.Product2.Fields.Family.label}" >
+                        <apex:selectList value="{!p.productRecord.Family}" size="1" multiselect="false" >
+                            <apex:selectOptions value = "{!FamilyOptions}"/>
                         </apex:selectList>
                     </apex:column>
-                    <apex:column headerValue="Active" >
-                        <apex:inputField value="{!p.isActive}" />
+                    <apex:column headerValue="{!$ObjectType.Product2.Fields.isActive.label}" >
+                        <apex:inputField value="{!p.productRecord.isActive}" />
                     </apex:column>
-                    <apex:column headerValue="UnitPrice" >
-                        <inputText value="UnitPrice" />
+                    <apex:column headerValue="{!$ObjectType.PriceBookEntry.Fields.UnitPrice.label}" >
+                        <apex:inputText value="{!p.pricebookEntryRecord.UnitPrice}" />
                     </apex:column>
-                    <apex:column headerValue="Init Inventory" >
-                        <apex:inputField value="{!p.Initial_Inventory__c}" />
+                    <apex:column headerValue="{!$ObjectType.Product2.Fields.Initial_Inventory__c.label}" >
+                        <apex:inputField value="{!p.productRecord.Initial_Inventory__c}" />
                     </apex:column>
                 </apex:pageBlockTable>
             </apex:pageBlock>
