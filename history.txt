@@ -1220,6 +1220,73 @@ Waiting for the package install request to complete. Status = IN_PROGRESS
 Successfully installed package [04t2I000000T4SlQAK]
 
 
+F:\Persdata\Dropbox\Trailhead DX\AdvancedApexSpecialist>sfdx force:source:push
+=== Pushed Source
+STATE  FULL NAME                                        TYPE               PROJECT PATH
+─────  ───────────────────────────────────────────────  ─────────────────  ─────────────────────────────────────────────────────────────────────────────────────────────────
+Add    New_Millennium_Delivery                          CustomApplication  force-app\main\default\applications\New_Millennium_Delivery.app-meta.xml
+Add    AnnouncementQueueable                            ApexClass          force-app\main\default\classes\AnnouncementQueueable.cls
+Add    AnnouncementQueueable                            ApexClass          force-app\main\default\classes\AnnouncementQueueable.cls-meta.xml
+Add    ChartHelper                                      ApexClass          force-app\main\default\classes\ChartHelper.cls
+Add    ChartHelper                                      ApexClass          force-app\main\default\classes\ChartHelper.cls-meta.xml
+Add    Constants                                        ApexClass          force-app\main\default\classes\Constants.cls
+Add    Constants                                        ApexClass          force-app\main\default\classes\Constants.cls-meta.xml
+Add    OrderExtension                                   ApexClass          force-app\main\default\classes\OrderExtension.cls
+Add    OrderExtension                                   ApexClass          force-app\main\default\classes\OrderExtension.cls-meta.xml
+Add    OrderHelper                                      ApexClass          force-app\main\default\classes\OrderHelper.cls
+Add    OrderHelper                                      ApexClass          force-app\main\default\classes\OrderHelper.cls-meta.xml
+Add    OrderTests                                       ApexClass          force-app\main\default\classes\OrderTests.cls
+Add    OrderTests                                       ApexClass          force-app\main\default\classes\OrderTests.cls-meta.xml
+Add    Product2Extension                                ApexClass          force-app\main\default\classes\Product2Extension.cls
+Add    Product2Extension                                ApexClass          force-app\main\default\classes\Product2Extension.cls-meta.xml
+Add    Product2Helper                                   ApexClass          force-app\main\default\classes\Product2Helper.cls
+Add    Product2Helper                                   ApexClass          force-app\main\default\classes\Product2Helper.cls-meta.xml
+Add    Product2Tests                                    ApexClass          force-app\main\default\classes\Product2Tests.cls
+Add    Product2Tests                                    ApexClass          force-app\main\default\classes\Product2Tests.cls-meta.xml
+Add    TestDataFactory                                  ApexClass          force-app\main\default\classes\TestDataFactory.cls
+Add    TestDataFactory                                  ApexClass          force-app\main\default\classes\TestDataFactory.cls-meta.xml
+Add    Inventory_Setting.Beverage                       CustomMetadata     force-app\main\default\customMetadata\Inventory_Setting.Beverage.md-meta.xml
+Add    Inventory_Setting.Dessert                        CustomMetadata     force-app\main\default\customMetadata\Inventory_Setting.Dessert.md-meta.xml
+Add    Inventory_Setting.Entree                         CustomMetadata     force-app\main\default\customMetadata\Inventory_Setting.Entree.md-meta.xml
+Add    Inventory_Setting.Side                           CustomMetadata     force-app\main\default\customMetadata\Inventory_Setting.Side.md-meta.xml
+Add    CustomLabels                                     CustomLabels       force-app\main\default\labels\CustomLabels.labels-meta.xml
+Add    Account-Account Layout                           Layout             force-app\main\default\layouts\Account-Account Layout.layout-meta.xml
+Add    Inventory_Setting__mdt-Inventory Setting Layout  Layout             force-app\main\default\layouts\Inventory_Setting__mdt-Inventory Setting Layout.layout-meta.xml
+Add    Order-Order Layout                               Layout             force-app\main\default\layouts\Order-Order Layout.layout-meta.xml
+Add    Product2-Product Layout                          Layout             force-app\main\default\layouts\Product2-Product Layout.layout-meta.xml
+Add    Inventory_Setting__mdt.Low_Quantity_Alert__c     CustomField        force-app\main\default\objects\Inventory_Setting__mdt\fields\Low_Quantity_Alert__c.field-meta.xml
+Add    Inventory_Setting__mdt                           CustomObject       force-app\main\default\objects\Inventory_Setting__mdt\Inventory_Setting__mdt.object-meta.xml
+Add    Product2.Initial_Inventory__c                    CustomField        force-app\main\default\objects\Product2\fields\Initial_Inventory__c.field-meta.xml
+Add    Product2.Quantity_Ordered__c                     CustomField        force-app\main\default\objects\Product2\fields\Quantity_Ordered__c.field-meta.xml
+Add    Product2.Quantity_Remaining__c                   CustomField        force-app\main\default\objects\Product2\fields\Quantity_Remaining__c.field-meta.xml
+Add    Product2.All                                     ListView           force-app\main\default\objects\Product2\listViews\All.listView-meta.xml
+Add    Product2.All_Products                            ListView           force-app\main\default\objects\Product2\listViews\All_Products.listView-meta.xml
+Add    Product2                                         CustomObject       force-app\main\default\objects\Product2\Product2.object-meta.xml
+Add    Product2.Description                             CustomField        force-app\main\default\objects\Product2\fields\Description.field-meta.xml
+Add    Product2.DisplayUrl                              CustomField        force-app\main\default\objects\Product2\fields\DisplayUrlfield-meta.xml
+Add    Product2.ExternalDataSourceId                    CustomField        force-app\main\default\objects\Product2\fields\ExternalDataSourceId.field-meta.xml
+Add    Product2.ExternalId                              CustomField        force-app\main\default\objects\Product2\fields\ExternalId.field-meta.xml
+Add    Product2.Family                                  CustomField        force-app\main\default\objects\Product2\fields\Family.field-meta.xml
+Add    Product2.IsActive                                CustomField        force-app\main\default\objects\Product2\fields\IsActive.field-meta.xml
+Add    Product2.Name                                    CustomField        force-app\main\default\objects\Product2\fields\Name.field-meta.xml
+Add    Product2.ProductCode                             CustomField        force-app\main\default\objects\Product2\fields\ProductCode.field-meta.xml
+Add    Product2.QuantityUnitOfMeasure                   CustomField        force-app\main\default\objects\Product2\fields\QuantityUnitOfMeasure.field-meta.xml
+Add    Product2.StockKeepingUnit                        CustomField        force-app\main\default\objects\Product2\fields\StockKeepingUnit.field-meta.xml
+Add    OrderEdit                                        ApexPage           force-app\main\default\pages\OrderEdit.page
+Add    OrderEdit                                        ApexPage           force-app\main\default\pages\OrderEdit.page-meta.xml
+Add    Product2New                                      ApexPage           force-app\main\default\pages\Product2New.page
+Add    Product2New                                      ApexPage           force-app\main\default\pages\Product2New.page-meta.xml
+Add    AdvancedApexSpecialistSuperbadge                 PermissionSet      force-app\main\default\permissionsets\AdvancedApexSpecialistSuperbadge.permissionset-meta.xml
+Add    Admin                                            Profile            force-app\main\default\profiles\Admin.profile-meta.xml
+Add    Custom%3A Marketing Profile                      Profile            force-app\main\default\profiles\Custom%3A Marketing Profile.profile-meta.xml
+Add    Custom%3A Sales Profile                          Profile            force-app\main\default\profiles\Custom%3A Sales Profile.profile-meta.xml
+Add    Custom%3A Support Profile                        Profile            force-app\main\default\profiles\Custom%3A Support Profile.profile-meta.xml
+Add    Security                                         Settings           force-app\main\default\settings\Security.settings-meta.xml
+Add    Product2Family                                   StandardValueSet   force-app\main\default\standardValueSets\Product2Family.standardValueSet-meta.xml
+Add    orderTrigger                                     ApexTrigger        force-app\main\default\triggers\orderTrigger.trigger
+Add    orderTrigger                                     ApexTrigger        force-app\main\default\triggers\orderTrigger.trigger-meta.xml
+Add    product2Trigger                                  ApexTrigger        force-app\main\default\triggers\product2Trigger.trigger
+Add    product2Trigger                                  ApexTrigger        force-app\main\default\triggers\product2Trigger.trigger-meta.xml
 
 
 

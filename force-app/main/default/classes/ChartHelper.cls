@@ -9,9 +9,12 @@ public without sharing class ChartHelper {
         //ToDo: Perform a calculation that aggregates active Products that have a positive Quantity_Remaining__c
         //  And return a list of chartData
         //  Where the name is the Product Family and the Qty is the sum of the Quantity_Remaining__c
+        system.debug('*** name *** data ***');
         for (AggregateResult agr : agrs ){
             chartData cD = new ChartData((String)agr.get('Family'),(Decimal)agr.get('Qty'));
-            cht.add(cD);    
+            cht.add(cD);
+            system.debug('*** '+cD.name+' *** '+cD.val);
+        
         }
 
         return cht;
