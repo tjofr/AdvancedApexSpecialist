@@ -164,8 +164,10 @@ public without sharing class TestDataFactory {
         insert ords;
         List<OrderItem> items = ConstructOrderItems(cnt, pbes, ords);
         insert items;
-        
+    }
 
+    public static void VerifyQuantityOrdered(Product2 originalProduct, Product2 updatedProduct, Integer qtyOrdered){
+        System.assertEquals(Integer.valueOf(originalProduct.Quantity_Ordered__c) + qtyOrdered, Integer.valueOf(updatedProduct.Quantity_Ordered__c));
 
     }
 
