@@ -107,16 +107,15 @@
     [
         "f:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\AnnouncementQueueable.cls",
         {
+            "state": "u",
             "sourcePath": "f:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\AnnouncementQueueable.cls",
             "isDirectory": false,
-            "size": 1141,
-            "modifiedTime": 1543011999018,
-            "changeTime": 1543011999654,
-            "contentHash": "665acea37f289c0046e3f75124a4780665565075",
             "isMetadataFile": false,
-            "state": "u",
+            "size": 1290,
+            "modifiedTime": 1544109479036,
+            "changeTime": 1544109479036,
             "isWorkspace": false,
-            "isArtifactRoot": false
+            "contentHash": "179212bc7474af7d34c03918dba0abbc741e9ebf"
         }
     ],
     [
@@ -175,7 +174,8 @@
             "contentHash": "f04509f360b250f1ad8cb4ead30314412790ff69",
             "isMetadataFile": false,
             "state": "u",
-            "isWorkspace": false
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -264,7 +264,8 @@
             "contentHash": "b552d281079b019bdaf438fcf7d431cfde6a96ec",
             "isMetadataFile": false,
             "state": "u",
-            "isWorkspace": false
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -315,16 +316,15 @@
     [
         "f:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\Product2Helper.cls",
         {
+            "state": "u",
             "sourcePath": "f:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\Product2Helper.cls",
             "isDirectory": false,
-            "size": 1980,
-            "modifiedTime": 1543011999068,
-            "changeTime": 1543012000163,
-            "contentHash": "ad74d6a78e1d83c8c18146aeb4393577f51861f3",
             "isMetadataFile": false,
-            "state": "u",
+            "size": 3613,
+            "modifiedTime": 1544113308913,
+            "changeTime": 1544113308913,
             "isWorkspace": false,
-            "isArtifactRoot": false
+            "contentHash": "b3fba693604ad571238c718758bfafd4a53c2d5a"
         }
     ],
     [
@@ -345,15 +345,16 @@
     [
         "f:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\Product2Tests.cls",
         {
-            "state": "u",
             "sourcePath": "f:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\Product2Tests.cls",
             "isDirectory": false,
-            "isMetadataFile": false,
             "size": 1503,
             "modifiedTime": 1544031133815,
             "changeTime": 1544031133815,
+            "contentHash": "11fb4cbd66d55eb87d0aff0daa88a9c62b7bb554",
+            "isMetadataFile": false,
+            "state": "u",
             "isWorkspace": false,
-            "contentHash": "11fb4cbd66d55eb87d0aff0daa88a9c62b7bb554"
+            "isArtifactRoot": false
         }
     ],
     [
@@ -382,7 +383,8 @@
             "contentHash": "5c3396184c340b21722c19cfe8d904ac67feba2d",
             "isMetadataFile": false,
             "state": "u",
-            "isWorkspace": false
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -1048,16 +1050,15 @@
     [
         "f:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\triggers\\product2Trigger.trigger",
         {
+            "state": "u",
             "sourcePath": "f:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\triggers\\product2Trigger.trigger",
             "isDirectory": false,
-            "size": 1022,
-            "modifiedTime": 1543011999508,
-            "changeTime": 1543012002961,
-            "contentHash": "dd1fbc1ea7e34fbc317d85711452d20afa59fd36",
             "isMetadataFile": false,
-            "state": "u",
+            "size": 244,
+            "modifiedTime": 1544109673993,
+            "changeTime": 1544109673993,
             "isWorkspace": false,
-            "isArtifactRoot": false
+            "contentHash": "76c23b6ea37451365a1399e7342a79967d618a72"
         }
     ],
     [

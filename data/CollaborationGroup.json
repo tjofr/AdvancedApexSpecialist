@@ -1,0 +1,13 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "CollaborationGroup",
+                "referenceId": "CollaborationGroupRef1"
+            },
+            "Name": "Inventory Announcements",
+            "Description": "This group is for New Millennium Delivery employees to receive inventory announcements.",
+            "CollaborationType": "Public"
+        }
+    ]
+}
