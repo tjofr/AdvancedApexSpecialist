@@ -29,7 +29,33 @@ private class Product2Tests {
             ext.save();
             List<Product2> prds = [select id from Product2];       
             System.assertEquals(5, prds.size());
+
+            ext.getFamilyOptions();
+            ext.GetInventory();
         Test.stopTest();
     }
+
+    @isTest
+    static void Product2Trigger_UnitTest() {
+            
+        Product2 p = new Product2();
+        p.Name = 'TestProduct';
+        p.Family = 'Side';
+        p.IsActive = true;
+        p.Quantity_Ordered__c = 4;
+        p.Initial_Inventory__c = 10;
+        insert p;
+
+        CollaborationGroup c = new CollaborationGroup();
+        c.Name = 'TEST' + Constants.INVENTORY_ANNOUNCEMENTS;
+        c.Description = 'test';
+        c.CollaborationType = 'Public';
+        insert c;
+
+        Test.startTest();
+        p.Quantity_Ordered__c=5;
+        update p;
+        Test.stopTest();
+    } 
 
 }

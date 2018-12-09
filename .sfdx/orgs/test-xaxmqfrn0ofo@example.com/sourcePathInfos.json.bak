@@ -197,15 +197,15 @@
     [
         "f:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\OrderExtension.cls",
         {
-            "state": "u",
             "sourcePath": "f:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\OrderExtension.cls",
             "isDirectory": false,
+            "size": 7722,
+            "modifiedTime": 1544291073550,
+            "changeTime": 1544291073550,
+            "contentHash": "57929c6f788c7f3e8ccb3a2e528f55aa25c30141",
             "isMetadataFile": false,
-            "size": 7465,
-            "modifiedTime": 1544286171978,
-            "changeTime": 1544286171978,
-            "isWorkspace": false,
-            "contentHash": "e153ec3f45d97bfa9f6d56ec966e1cf085795afe"
+            "state": "u",
+            "isWorkspace": false
         }
     ],
     [
@@ -256,16 +256,15 @@
     [
         "f:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\OrderTests.cls",
         {
+            "state": "u",
             "sourcePath": "f:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\OrderTests.cls",
             "isDirectory": false,
-            "size": 852,
-            "modifiedTime": 1544024695789,
-            "changeTime": 1544024695789,
-            "contentHash": "b552d281079b019bdaf438fcf7d431cfde6a96ec",
             "isMetadataFile": false,
-            "state": "u",
+            "size": 2493,
+            "modifiedTime": 1544365863915,
+            "changeTime": 1544365863915,
             "isWorkspace": false,
-            "isArtifactRoot": false
+            "contentHash": "03af691423a2bbe173c6db73c634a8842d3794e0"
         }
     ],
     [
@@ -348,14 +347,13 @@
         {
             "sourcePath": "f:\\Persdata\\Dropbox\\Trailhead DX\\AdvancedApexSpecialist\\force-app\\main\\default\\classes\\Product2Tests.cls",
             "isDirectory": false,
-            "size": 1503,
-            "modifiedTime": 1544031133815,
-            "changeTime": 1544031133815,
-            "contentHash": "11fb4cbd66d55eb87d0aff0daa88a9c62b7bb554",
+            "size": 2175,
+            "modifiedTime": 1544304453408,
+            "changeTime": 1544304453408,
+            "contentHash": "d9d4a4ca5bda647789ccd2fe7c6832c26767e314",
             "isMetadataFile": false,
             "state": "u",
-            "isWorkspace": false,
-            "isArtifactRoot": false
+            "isWorkspace": false
         }
     ],
     [
